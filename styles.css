@@ -1,0 +1,147 @@
+:root {
+    --background: #1d2021;
+    --foreground: #fbf8ee;
+    --accent: #6bc2d1;
+    --radius: 0;
+    --font-size: 1.2rem;
+    --line-height: 1.54em;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    background-color: var(--background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 90%;
+    font-family:
+        "Fira Code",
+        "JetBrains Mono",
+        Monaco,
+        Consolas,
+        "Ubuntu Mono",
+        monospace;
+    font-size: var(--font-size);
+    font-weight: 400;
+    line-height: var(--line-height);
+    background-color: var(--background);
+    color: var(--foreground);
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: contextual;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: var(--font-size);
+    transition-duration: 0.1s;
+}
+
+a:hover {
+    color: var(--foreground);
+}
+
+audio {
+    display: none;
+}
+
+.title {
+    font-size: 2.4rem;
+    color: var(--accent);
+}
+
+.heading {
+    font-size: 1.8rem;
+    color: var(--accent);
+}
+
+.content {
+    padding-top: 1rem;
+}
+
+.sub {
+    font-size: 1rem;
+    color: var(--accent);
+    opacity: 70%;
+}
+
+.chat {
+    width: 98vw;
+    max-width: 98vw;
+    overflow-y: scroll;
+    height: 100%;
+    max-height: 90%;
+}
+
+.hideScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.hideScroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.actions {
+    position: relative;
+    bottom: 0;
+    display: block;
+    width: 98vw;
+    max-width: 98vw;
+    box-sizing: border-box;
+    margin-left: 0.8rem;
+}
+
+.actions input {
+    height: 100%;
+    max-height: 5%;
+    width: 98vw;
+    max-width: 98vw;
+    display: block;
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--accent);
+    margin-left: 0.2rem;
+    font-family: inherit;
+    font-size: var(--font-size);
+}
+
+.messages div {
+    font-size: var(--font-size);
+    width: fit-content;
+    max-width: 90%;
+    display: block;
+    margin: 0.2rem;
+    padding: 0.8rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.messages .bot {
+    color: var(--foreground);
+}
+
+.messages .self {
+    color: var(--accent);
+}

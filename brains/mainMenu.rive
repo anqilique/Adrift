@@ -1,0 +1,55 @@
+// Main Menu
+
+> topic menu
+
+    + *
+    - <br><span class="heading"><< MAIN MENU >></span><br><br>
+    ^ [1] New Game<br>
+    ^ [2] Load Game<br>
+    ^ [3] About
+
+    + (1|new game|new)
+    - Creating a new game...{topic=new}<br><br>{@howto}
+
+    + (2|load game|load)
+    - Load game not done yet.
+
+    + (3|about|credits)
+    - Loading game info...{topic=about}<br><br>{@display}
+
+
+< topic
+
++ menu
+- {topic=menu}{@*}
+
+> topic new
+
+    + howto
+    - <br><span class="heading"><< NEW GAME >></span><br><br>
+    ^ Use the following commands to change default values:<br>
+    ^ 'set name yourNameHere' - Give your character a name.<br>
+    ^ <br> 'back/quit/menu' - Go back to the Main Menu<br>
+
+    + set name *
+    - Code in set username to <star>
+
+    + *
+    - Invalid command '<star>'
+
+    + (back|quit|menu|back/quit/menu)
+    - Returning to the menu...<br><br>{topic=menu}{@*}
+
+< topic
+
+> topic about
+
+    + display
+    - <span class="heading"><< ABOUT >></span><br><br>
+    ^ ADRIFT is a text-based fishing game created by Anqilique.<br>
+    ^ <br>Enter anything to go back...
+
+    + *
+    - Returning to the menu...<br><br>{topic=menu}{@*}
+
+< topic
