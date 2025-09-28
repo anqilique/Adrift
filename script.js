@@ -48,11 +48,7 @@ function selfReply(message) {
 
 
 function botLoaded() {
-    if (window.innerWidth < 1000) {
-        window.location.replace("./links.html");
-    } else {
-        bot.loadFile(brains).then(botReady).catch(botNotReady);
-    }
+    bot.loadFile(brains).then(botReady).catch(botNotReady);
 }
 
 function botReady() {
