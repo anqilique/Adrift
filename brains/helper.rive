@@ -3,9 +3,10 @@
 > topic helper
 
     + help{weight=100}
-    - Here are some valid commands to try!<br><br>
+    - <br><span class="heading"><< HELP >></span><br><br>
     ^ 'menu' - Loads the game menu.<br>
     ^ 'tidy' - Cleans up previous messages except the latest one.
+    ^ <br>
 
     + tidy{weight=100}
     - <call>tidy_chat</call>
