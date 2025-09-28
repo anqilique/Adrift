@@ -31,14 +31,14 @@ botReply(loading_brains_msg);
 
 function botReply(message) {
     message_container.innerHTML += `<div class="bot">${message}</div>`;
-    location.href = '#latest';
+    location.href = '#game';
 
     input_box.focus();
 }
 
 function selfReply(message) {
     message_container.innerHTML += `<div class="self">> ${message}</div>`;
-    location.href = '#latest';
+    location.href = '#game';
 
     bot.reply("local-user", message).then(function (reply) {
         botReply(reply);
