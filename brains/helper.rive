@@ -14,7 +14,6 @@
     > object tidy_chat javascript
         const message_container = document.querySelector('.messages');
         if (message_container && message_container.children.length > 1) {
-            // Remove all children except the last one
             while (message_container.children.length > 2) {
                 message_container.removeChild(message_container.firstChild);
             }
