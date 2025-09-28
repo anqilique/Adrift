@@ -27,7 +27,6 @@ form.addEventListener('submit', (event) => {
 
 
 botReply(loading_brains_msg);
-window.addEventListener('resize', checkResize);
 
 
 function botReply(message) {
