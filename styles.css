@@ -3,6 +3,7 @@
     --foreground: #fbf8ee;
     --accent: #6bc2d1;
     --radius: 0;
+    --max-font-size: 1.2rem;
     --font-size: 1.2rem;
     --line-height: 1.54em;
 }

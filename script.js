@@ -7,6 +7,7 @@ const input_box = document.querySelector('input');
 const brains = [
     "./brains/mainMenu.rive",
     "./brains/botVars.rive",
+    "./brains/helper.rive",
 ];
 
 const title = `<pre class="title"><<< ADRIFT >>></pre>`;

@@ -1,0 +1,27 @@
+// Helper Functions
+
+> topic helper
+
+    + help{weight=100}
+    - Here are some valid commands to try!<br><br>
+    ^ 'menu' - Loads the game menu.<br>
+    ^ 'tidy' - Cleans up previous messages except the latest one.
+
+    + tidy{weight=100}
+    - <call>tidy_chat</call>
+
+    > object tidy_chat javascript
+        const message_container = document.querySelector('.messages');
+        if (message_container && message_container.children.length > 1) {
+            // Remove all children except the last one
+            while (message_container.children.length > 2) {
+                message_container.removeChild(message_container.firstChild);
+            }
+
+            return "The chat has been tidied up."
+        } else {
+            return "There isn't enough content to tidy up."
+        }
+    < object
+
+< topic

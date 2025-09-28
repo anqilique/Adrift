@@ -1,12 +1,14 @@
 // Main Menu
 
-> topic menu
+> topic menu inherits helper
 
-    + *
+    + menu
     - <br><span class="heading"><< MAIN MENU >></span><br><br>
     ^ [1] New Game<br>
     ^ [2] Load Game<br>
-    ^ [3] About
+    ^ [3] About <br><br>
+    ^ <span class="sub">Enter the option or number to select.<br>
+    ^ E.g. 'new' or '1' --> New Game </span><br><br>
 
     + (1|new game|new)
     - Creating a new game...{topic=new}<br><br>{@howto}
@@ -17,32 +19,35 @@
     + (3|about|credits)
     - Loading game info...{topic=about}<br><br>{@display}
 
+    + *
+    - '<star>' is not a valid command.<br>{@menu}
+
 
 < topic
 
 + menu
-- {topic=menu}{@*}
+- {topic=menu}{@menu}
 
-> topic new
+> topic new inherits helper
 
     + howto
     - <br><span class="heading"><< NEW GAME >></span><br><br>
     ^ Use the following commands to change default values:<br>
-    ^ 'set name yourNameHere' - Give your character a name.<br>
+    ^ 'namechar yourNameHere' - Give your character a name.<br>
     ^ <br> 'back/quit/menu' - Go back to the Main Menu<br>
 
-    + set name *
-    - Code in set username to <star>
+    + namechar *
+    - Code this in later!!!
 
     + *
     - Invalid command '<star>'
 
     + (back|quit|menu|back/quit/menu)
-    - Returning to the menu...<br><br>{topic=menu}{@*}
+    - Returning to the menu...<br><br>{topic=menu}{@menu}
 
 < topic
 
-> topic about
+> topic about inherits helper
 
     + display
     - <span class="heading"><< ABOUT >></span><br><br>
@@ -50,6 +55,6 @@
     ^ <br>Enter anything to go back...
 
     + *
-    - Returning to the menu...<br><br>{topic=menu}{@*}
+    - Returning to the menu...<br><br>{topic=menu}{@menu}
 
 < topic
