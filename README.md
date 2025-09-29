@@ -3,6 +3,9 @@ Text-based fishing game with RiveScript.
 
 # Changelog
 
+### 29/09/25
+- Create global variables file.
+
 ### 28/09/25
 - Public repo.
 - Made it work on mobile.

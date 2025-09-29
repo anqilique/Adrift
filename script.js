@@ -5,6 +5,7 @@ const form = document.querySelector('form');
 const input_box = document.querySelector('input');
 
 const brains = [
+    "./brains/globalVars.rive",
     "./brains/mainMenu.rive",
     "./brains/botVars.rive",
     "./brains/helper.rive",

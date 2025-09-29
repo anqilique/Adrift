@@ -1,0 +1,4 @@
+// Global Variables
+
+! global debug    = false
+! global depth    = 10
